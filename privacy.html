@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Learning OS</title>
+  <meta name="description" content="Privacy Policy for Learning OS desktop application." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131a;
+      --border: #2a2a3a;
+      --accent: #6c63ff;
+      --accent2: #a78bfa;
+      --text: #e8e8f0;
+      --muted: #8888aa;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,15,0.9);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-size: 1.2rem; font-weight: 700; color: var(--accent2); text-decoration: none; }
+    nav a.back { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+    nav a.back:hover { color: var(--text); }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+    .page-label {
+      color: var(--accent2);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent2);
+    }
+    p, li {
+      color: #b0b0cc;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    ul { padding-left: 1.5rem; margin-top: 0.5rem; }
+    li { margin-bottom: 0.4rem; }
+    .highlight {
+      background: rgba(108,99,255,0.1);
+      border: 1px solid rgba(108,99,255,0.25);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .highlight p { color: var(--text); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--accent2); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">🧠 Learning OS</a>
+    <a href="index.html" class="back">← Back to Home</a>
+  </nav>
+
+  <div class="container">
+    <p class="page-label">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: September 2025</p>
+
+    <div class="highlight">
+      <p><strong>Summary:</strong> Learning OS is a private desktop application. We do not collect, store, or transmit any of your personal data or documents to our servers. Everything stays on your device and your personal Google Drive.</p>
+    </div>
+
+    <h2>1. What is Learning OS?</h2>
+    <p>Learning OS is a desktop application built with Tauri (Rust + web technologies) designed to help users organize knowledge, generate AI-assisted lessons, and save documents to their own Google Drive account.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We do <strong>not</strong> collect any personal information. The application runs entirely on your local device. Specifically:</p>
+    <ul>
+      <li>No account registration is required on our end.</li>
+      <li>No analytics or telemetry data is sent to any server.</li>
+      <li>No usage data, crash reports, or behavioral data is collected.</li>
+    </ul>
+
+    <h2>3. Google Account &amp; OAuth</h2>
+    <p>Learning OS integrates with Google services (Google Drive and Google Docs) to allow you to save your notes. When you connect your Google account:</p>
+    <ul>
+      <li>We use the standard <strong>OAuth 2.0</strong> protocol via Google's official authentication system.</li>
+      <li>Your Google credentials (username and password) are <strong>never visible to us</strong> — they are entered directly on Google's login page.</li>
+      <li>We request the following permissions:
+        <ul>
+          <li><code>drive.file</code> — Create and manage files in your Google Drive that were created by this app.</li>
+          <li><code>documents</code> — Create and edit Google Docs on your behalf.</li>
+        </ul>
+      </li>
+      <li>Your OAuth access token is stored <strong>only on your local device</strong> and is never transmitted to us.</li>
+      <li>We do not access any existing files in your Drive except those created by Learning OS.</li>
+    </ul>
+
+    <h2>4. Data Storage</h2>
+    <p>All data generated by Learning OS is stored in two places:</p>
+    <ul>
+      <li><strong>Your device</strong>: A local SQLite database on your computer stores your lessons, notes, and settings.</li>
+      <li><strong>Your Google Drive</strong>: When you choose to save a document, it is uploaded directly to your personal Google Drive account.</li>
+    </ul>
+    <p>We have no access to either of these storage locations.</p>
+
+    <h2>5. Third-Party Services</h2>
+    <p>Learning OS may use the following third-party services at your direction:</p>
+    <ul>
+      <li><strong>Google Drive API</strong> — to save documents to your Drive.</li>
+      <li><strong>Google Docs API</strong> — to create formatted documents.</li>
+      <li><strong>AI providers</strong> (if configured) — to generate lesson content. These requests are made directly from your device using API keys you provide.</li>
+    </ul>
+    <p>Each of these services is governed by their own privacy policies.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>Learning OS is not directed at children under 13. We do not knowingly collect information from children.</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy occasionally. Changes will be reflected by updating the "Last updated" date at the top of this page.</p>
+
+    <h2>8. Contact</h2>
+    <p>If you have questions about this Privacy Policy or the application, please open an issue on our GitHub repository.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Learning OS · <a href="index.html">Home</a> · Privacy Policy</p>
+  </footer>
+</body>
+</html>
